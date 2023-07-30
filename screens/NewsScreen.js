@@ -40,4 +40,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default NewsScreen
+export default NewsScreen;

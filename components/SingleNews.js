@@ -33,13 +33,13 @@ const SingleNews = ({ item, index }) => {
         style={{ height: "45%", resizeMode: "cover", width: "windoWidth" }}
       />
       <View style={{ ...styles.desc, backgroundColor: darkTheme ? "#282c35" : 'white' }}>
-        <Text style={{ ...styles.title, color: darkTheme ?   'white' : "black"}}>{item.title}</Text>
-        <Text style={{ ...styles.content, color :  darkTheme ?   'white' : "black"}}>
+        <Text style={{ ...styles.title, color: darkTheme ?   '#cdcdcd' : "black"}}>{item.title}</Text>
+        <Text style={{ ...styles.content, color :  darkTheme ?   '#C0C0C0' : "black"}}>
           {item.description}
         </Text>
-        <Text style={{ color: darkTheme ?   'white' : "black" }}>
-          Short By
-          <Text>{item.author ?? "unknown"}</Text>
+        <Text style={{ color: darkTheme ?   'white' : "black", marginTop : 10 }}>
+          Short By <Text> </Text>
+          <Text style={{marginLeft : 10}}>{item.author ?? "Abp News"}</Text>
         </Text>
         <ImageBackground
           style={styles.footer}
@@ -49,11 +49,11 @@ const SingleNews = ({ item, index }) => {
           <TouchableOpacity
             onPress={()=>Linking.openURL(item.url)}
           >
-            <Text style={{ fontSize: 15, color: "white" }}>
-              '{item?.content?.slice(0, 45)}...'
+            <Text style={{ fontSize: 14, color: "white" }}>
+              '{item?.content?.slice(0, 30)}...'
             </Text>
-            <Text style={{ fontSize: 17, fontWeight: "bold", color: "white" }}>
-              Read More
+            <Text style={{ fontSize: 12, color: "white" }}>
+              Tap to know more
             </Text>
           </TouchableOpacity>
         </ImageBackground>
@@ -64,7 +64,7 @@ const SingleNews = ({ item, index }) => {
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: "bold",
     paddingBottom: 10,
   },

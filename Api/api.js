@@ -68,7 +68,7 @@ export const sources = [
   {
     id: "cnn",
     name: "CNN",
-    pic: "https://www.freepnglogos.com/pics/cnn-logo-png",
+    pic: "https://www.freepnglogos.com/uploads/cnn-logo-original-png-0.png",
   },
   {
     id: "fox-news",
